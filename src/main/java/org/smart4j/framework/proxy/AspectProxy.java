@@ -46,12 +46,12 @@ public abstract class AspectProxy implements Proxy {
         return true;
     }
 
-    public boolean before(Class<?> targetCls,Method targetMethod,Object[] params) throws Throwable{
-        return true;
+    public void before(Class<?> targetCls,Method targetMethod,Object[] params) throws Throwable{
+
     }
 
-    public boolean after(Class<?> targetCls,Method targetMethod,Object[] params) throws Throwable{
-        return true;
+    public void after(Class<?> targetCls,Method targetMethod,Object[] params) throws Throwable{
+
     }
 
     public void error(Class<?> targetCls,Method targetMethod,Object[] params) throws Throwable{
