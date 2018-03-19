@@ -6,6 +6,9 @@ import org.smart4j.framework.helper.ConfigHelper;
 import org.smart4j.framework.helper.IocHelper;
 import org.smart4j.framework.util.ClassUtil;
 
+/**
+ * 用于加载各个工具类的静态域
+ */
 public final class HelperLoader {
     public static void init() {
         Class<?>[] classList = {

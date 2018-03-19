@@ -62,7 +62,6 @@ public class ClassUtil {
 
         try {
             Enumeration<URL> urls = getClassLoader().getResources(packageName.replace(".", "/"));
-
             while (urls.hasMoreElements()) {
                 URL url = urls.nextElement();
                 if (url != null) {
@@ -135,6 +134,16 @@ public class ClassUtil {
         Class<?> cls = loadClass(className, false);
         classSet.add(cls);
     }
+
+    public static void main(String[] args) {
+
+        Set<Class<?>> classSet = getClassSet("org.smart4j.framework.util");
+
+        classSet.forEach(item->{
+            LOGGER.info(item.getName());
+        });
+    }
+
 
 }
 
